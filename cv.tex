@@ -1,29 +1,26 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,10pt]{article} % Compact font size
 \usepackage[utf8]{inputenc}
 \usepackage{geometry}
-\usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{parskip}
+\usepackage{hyperref} % For clickable links
+\usepackage{fontawesome} % For icons
 
 % Set margins
-\geometry{a4paper, margin=0.7in}
+\geometry{a4paper, margin=0.5in} % Adjusted margins for better use of space
 \setlength{\parindent}{0pt} % No paragraph indent
 
 % Colors
 \definecolor{headercolor}{HTML}{2E86C1}
 \definecolor{darktext}{HTML}{333333}
-\definecolor{lightgray}{HTML}{666666}
 
 % Font style for section headers
-\titleformat{\section}{\color{headercolor}\LARGE\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\section}{\color{headercolor}\Large\bfseries}{}{0em}{}[\titlerule]
 
 % Adjust the space before and after section headers
-\titlespacing{\section}{0pt}{5pt}{5pt}
-
-% Logo size adjustment
-\newcommand{\companylogo}[2]{\raisebox{-0.3\height}{\includegraphics[height=#2]{#1}}}
+\titlespacing{\section}{0pt}{8pt}{4pt} % Reduced space before and after section headers
 
 % Document
 \begin{document}
@@ -31,78 +28,82 @@
 % Header for name and contact info
 \begin{center}
     {\Huge \textbf{Nikhil Sharma}} \\
-    \small \texttt{email@example.com} \hspace{1.5em} | \hspace{1.5em} +91-XXXXXXXXXX \hspace{1.5em} | \hspace{1.5em} \texttt{linkedin.com/in/yourprofile}
+    \vspace{6pt} % Slight spacing between name and contact details
+    \small
+    \faEnvelope \href{mailto:email@example.com}{email@example.com} \hspace{1.5em} % Gmail Icon
+    \faMobile \hspace{0.3em} +91-9661052552 \hspace{1.5em} % Mobile Icon
+    \faLinkedinSquare \href{https://www.linkedin.com/in/nikhilsh2003/}{linkedin.com/in/nikhilsh2003} \hspace{1.5em} % LinkedIn Icon
+    \faGithub \href{https://github.com/nikhilsh2003}{github.com/nikhilsh2003} % GitHub Icon
 \end{center}
 
-\vspace{0.5em} % Reduced spacing after contact info
+\vspace{0.7em} % Slightly reduced vertical space after contact info
 
 % Summary Section
 \section*{Summary}
-Dynamic software developer with a year of experience at Deutsche Bank and a summer internship at Mastercard. Strong foundation in Electronics and Communications Engineering from NIT Warangal, showcasing exceptional problem-solving abilities and proficiency in popular programming languages.
+Results-driven software developer with strong problem-solving skills and a passion for learning new technologies. A collaborative team player, unafraid to tackle noble and challenging tasks, and known for delivering innovative solutions. Highly motivated, with a proven ability to adapt quickly and excel in both individual and team-based projects..
 
-\vspace{0.5em} % Reduced spacing after summary
+\vspace{0.7em} % Reduced spacing after summary
 
 % Experience Section
 \section*{Experience}
-\begin{itemize}[leftmargin=0.3in, itemsep=4pt, topsep=4pt]
+\begin{itemize}[leftmargin=0.3in, itemsep=3pt, topsep=2pt] % Reduced item spacing
     \item
-    \textbf{\companylogo{deutschebank-logo.png}{0.6cm} Deutsche Bank} \hfill \textit{Aug 2023 – Present} \\
+    \textbf{Deutsche Bank} \hfill \textit{Aug 2023 – Present} \\
     \textit{Software Developer} \\
-    Developed software solutions for financial services, enhancing system performance and scalability.
+    Developed software solutions for financial services, improving system performance and scalability.
     \begin{itemize}[leftmargin=*]
         \item Technologies: Java, Python, SQL, Docker, Jenkins
     \end{itemize}
 
     \item
-    \textbf{\companylogo{mastercard-logo.png}{0.6cm} Mastercard} \hfill \textit{May 2022 – July 2022} \\
+    \textbf{Mastercard} \hfill \textit{May 2022 – July 2022} \\
     \textit{Summer Intern} \\
-    Created a transaction monitoring system to detect fraudulent activity.
+    Created a transaction monitoring system to detect fraudulent activities.
     \begin{itemize}[leftmargin=*]
         \item Technologies: C++, REST APIs, SQL
     \end{itemize}
 \end{itemize}
 
-\vspace{0.5em} % Reduced spacing after experience
+\vspace{0.7em} % Reduced spacing after experience
 
 % Education Section
 \section*{Education}
-\begin{itemize}[leftmargin=0.3in, itemsep=4pt, topsep=4pt]
+\begin{itemize}[leftmargin=0.3in, itemsep=3pt, topsep=2pt]
     \item
-    \textbf{\companylogo{nitw-logo.png}{0.6cm} National Institute of Technology, Warangal} \hfill \textit{2019 – 2023} \\
+    \textbf{National Institute of Technology, Warangal} \hfill \textit{2019 – 2023} \\
     \textit{B.Tech in Electronics and Communication Engineering} \\
-    CGPA: 8.7/10 \\
-    Graduated with distinction and actively participated in programming competitions.
+    CGPA: 8.7/10
 \end{itemize}
 
-\vspace{0.5em} % Reduced spacing after education
+\vspace{0.7em} % Reduced spacing after education
 
 % Skills Section
 \section*{Skills}
-\begin{itemize}[leftmargin=0.3in, itemsep=4pt, topsep=4pt]
+\begin{itemize}[leftmargin=0.3in, itemsep=3pt, topsep=2pt]
     \item Programming Languages: C, C++, Python, Java
     \item Web Development: HTML, CSS, JavaScript, Node.js
     \item Databases: MySQL, PostgreSQL
     \item Tools: Git, Docker, Jenkins
 \end{itemize}
 
-\vspace{0.5em} % Reduced spacing after skills
+\vspace{0.7em} % Reduced spacing after skills
 
 % Projects Section
 \section*{Projects}
-\begin{itemize}[leftmargin=0.3in, itemsep=4pt, topsep=4pt]
+\begin{itemize}[leftmargin=0.3in, itemsep=3pt, topsep=2pt]
     \item \textbf{Transaction Monitoring System} \\
-    Developed during my internship at Mastercard to detect fraudulent activities based on transaction patterns using a custom-built monitoring engine.
+    Built during internship at Mastercard to detect fraudulent activities based on transaction patterns using a custom-built monitoring engine.
 
     \item \textbf{Financial Data Processing API} \\
     Created a scalable API to process large sets of financial data in real-time at Deutsche Bank.
 \end{itemize}
 
-\vspace{0.5em} % Reduced spacing after projects
+\vspace{0.7em} % Reduced spacing after projects
 
 % Additional Information Section
 \section*{Additional Information}
-\begin{itemize}[leftmargin=0.3in, itemsep=4pt, topsep=4pt]
-    \item Certifications: AWS Certified Solutions Architect, Google Cloud Certified Professional Data Engineer
+\begin{itemize}[leftmargin=0.3in, itemsep=3pt, topsep=2pt]
+    \item Certifications: \href{https://aws.amazon.com/certification/certified-solutions-architect-associate/}{AWS Certified Solutions Architect}, \href{https://cloud.google.com/certification/data-engineer}{Google Cloud Certified Professional Data Engineer}
     \item Languages: English (Fluent), Hindi (Fluent)
 \end{itemize}
 
