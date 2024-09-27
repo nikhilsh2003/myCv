@@ -7,15 +7,14 @@
 \usepackage{parskip}
 \usepackage{hyperref} % For clickable links
 \usepackage{fontawesome} % For icons
+\usepackage{multicol}
 
 % Set margins
-\geometry{a4paper, margin=0.5in} % Adjusted margins for better use of space
+\geometry{a4paper, margin=0.4in} % Adjusted margins for better use of space
 \setlength{\parindent}{0pt} % No paragraph indent
-
 % Colors
 \definecolor{headercolor}{HTML}{2E86C1}
 \definecolor{darktext}{HTML}{333333}
-
 % Font style for section headers
 \titleformat{\section}{\color{headercolor}\Large\bfseries}{}{0em}{}[\titlerule]
 
@@ -36,12 +35,12 @@
     \faGithub \href{https://github.com/nikhilsh2003}{github.com/nikhilsh2003} % GitHub Icon
 \end{center}
 
-\vspace{0.3em} % Slightly reduced vertical space after contact info
+\vspace{0.01em} % Slightly reduced vertical space after contact info
 
 % Summary Section
 \section*{Summary}
 Results-driven \underline{software developer} with strong \underline{problem-solving skills} and a passion for learning \underline{new technologies}. A collaborative \underline{team player}, unafraid to tackle \underline{challenging tasks}, and known for delivering \underline{innovative solutions}. Highly motivated, with a proven ability to \underline{adapt quickly} and excel in both individual and \underline{team-based projects}.
-\vspace{0.3em} % Reduced spacing after summary
+\vspace{0.01em} % Reduced spacing after summary
 
 % Experience Section
 \section*{Experience}
@@ -56,24 +55,19 @@ Results-driven \underline{software developer} with strong \underline{problem-sol
     \item Operated within an \textbf{Agile at scale} environment, actively participating in tribe-level \textbf{Scrum ceremonies} such as \underline{Big Room Planning} and \underline{Sprint Retrospectives}.
     \item Developed a strong understanding of the \underline{end-to-end flow} of the system, gaining deep insights into how all project components are interconnected.
     \item Proficient in a wide array of technologies, including \textbf{Scala, SQL, Java Spring Boot, Python Airflow, Liquibase}, and \textbf{HQL}.
-
     \end{itemize}
-
     \item
     \textbf{Mastercard} \hfill \textit{May 2022 – July 2022} \\
     \textit{Summer Intern} - \href{https://drive.google.com/file/d/1ZbCn1KdSOp6jQ81p2Z8JYz5PDfkcwUmJ/view?usp=sharing}{\underline{Experience Certificate}} 
     \vspace{0.25em}\\
     Designed and developed a \underline{configurable data quality validator} using \underline{ASP.NET Core}. This utility can be easily configured for use by different \underline{Mastercard teams}.
 \begin{itemize}[leftmargin=*]
-    \item Developed a \underline{website for the validator} using \underline{Razor pages} and \underline{JavaScript}.
-    \item Implemented \underline{client-side validations} using \underline{regex} for improved user input accuracy.
+    \item Developed a \underline{website for the validator} using \underline{Razor pages} and \underline{JavaScript}, implementing \underline{client-side validations} with \underline{regex} for improved user input accuracy.
     \item Optimized page loading times using \underline{AJAX} for \underline{lazy loading}.
-    \item Technologies: \underline{C++}, \underline{REST APIs}, \underline{SQL}
+    \item Technologies: \underline{C++}, \underline{REST APIs}, \underline{SQL}.
 \end{itemize}
 \end{itemize}
-
-\vspace{0.3em} % Reduced spacing after experience
-
+\vspace{0.001em} % Reduced spacing after experience
 % Education Section
 \section*{Education}
 \begin{itemize}[leftmargin=0.3in, itemsep=3pt, topsep=2pt]
@@ -82,37 +76,34 @@ Results-driven \underline{software developer} with strong \underline{problem-sol
     \textit{B.Tech in Electronics and Communication Engineering} \\
     CGPA: 7.7/10
 \end{itemize}
-
-\vspace{0.3em} % Reduced spacing after education
-
+\vspace{0.001em} % Reduced spacing after education
 % Skills Section
 \section*{Skills}
-\begin{itemize}[leftmargin=0.3in, itemsep=0.7pt, topsep=2pt]
-    \item Programming Languages: C++, Python, Java
-    \item Web Development: HTML, CSS, JavaScript, Node.js
-    \item Databases: MySQL, PostgreSQL
-    \item Tools: Git, Docker, Jenkins
-\end{itemize}
-
-\vspace{0.3em} % Reduced spacing after skills
-
-% Projects Section
+\begin{multicols}{2}  % Start two-column environment
+    \begin{itemize}[leftmargin=0.3in, itemsep=0.7pt, topsep=2pt]
+        \item Programming Languages: C++, Python, Java
+        \item Web Development: HTML, CSS, JavaScript, Node.js
+    \end{itemize}
+    \begin{itemize}[leftmargin=0.3in, itemsep=0.7pt, topsep=2pt]
+        \item Databases: MySQL, PostgreSQL
+        \item Tools: Git, Docker, Jenkins
+    \end{itemize}
+\end{multicols}
+\vspace{0.001em} % Reduced spacing after skills
+    % Projects Section
 \section*{Projects}
-\begin{itemize}[leftmargin=0.3in, itemsep=3pt, topsep=2pt]
-    \item \textbf{Transaction Monitoring System} \\
-    Built during internship at Mastercard to detect fraudulent activities based on transaction patterns using a custom-built monitoring engine.
-
-    \item \textbf{Financial Data Processing API} \\
-    Created a scalable API to process large sets of financial data in real-time at Deutsche Bank.
+\begin{itemize}[leftmargin=0.3in, itemsep=3pt, topsep=0pt] % Adjust spacing as needed
+    \item \textbf{\href{<insert_blog_site_url_here>}{Blog Site}} \\
+    Developed a markdown-based blog site with unique slugs using Express and MongoDB Atlas, enabling easy navigation and a compose feature for users.
+    
+    \item \textbf{\href{<insert_secrets_app_url_here>}{Secrets App}} \\
+    Created an anonymous secrets submission app with Google authentication, ensuring password security through salting and hashing techniques.
 \end{itemize}
-
-\vspace{0.3em} % Reduced spacing after projects
-
+\vspace{0.001em} % Reduced spacing after projects
 % Additional Information Section
 \section*{Additional Information}
 \begin{itemize}[leftmargin=0.3in, itemsep=3pt, topsep=2pt]
     \item Certifications: \href{https://aws.amazon.com/certification/certified-solutions-architect-associate/}{AWS Certified Solutions Architect}, \href{https://cloud.google.com/certification/data-engineer}{Google Cloud Certified Professional Data Engineer}
     \item Languages: English (Fluent), Hindi (Fluent)
 \end{itemize}
-
 \end{document}
