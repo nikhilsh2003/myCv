@@ -1,0 +1,39 @@
+name: Build and Deploy Resume
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX Resume
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: cv.tex
+          latexmk_shell_escape: true
+          working_directory: resume
+
+      - name: Prepare PDF for Publishing
+        run: |
+          mkdir -p deploy
+          mv resume/cv.pdf deploy/Nikhil_Sharma_Resume.pdf
+
+      - name: Upload PDF as Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: deploy/Nikhil_Sharma_Resume.pdf
+
+      - name: Deploy to GitHub Pages (build branch)
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
+          publish_branch: build
+          force_orphan: true
+          enable_jekyll: false
