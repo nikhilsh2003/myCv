@@ -1,15 +1,14 @@
-\documentclass[a4paper,10pt]{article}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\documentclass\[a4paper,10pt]{article} % Compact font size
+
+\usepackage\[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{xcolor}
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{parskip}
-\usepackage{hyperref}
-\usepackage{fontawesome5}
+\usepackage{hyperref} % For clickable links
+\usepackage{fontawesome} % For icons
 \usepackage{multicol}
-
 
 % Set margins
 \geometry{a4paper, margin=0.3in} % Adjusted margins for better use of space
@@ -20,7 +19,12 @@
 \definecolor{darktext}{HTML}{333333}
 
 % Font style for section headers
-\titleformat{\section}{\color{headercolor}\Large\bfseries}{}{0em}{}\[\titlerule]
+\titleformat{\section}
+{\color{headercolor}\Large\bfseries}
+{}
+{0em}
+{}
+\[\titlerule]
 
 % Adjust the space before and after section headers
 \titlespacing{\section}{0pt}{8pt}{4pt} % Reduced space before and after section headers
