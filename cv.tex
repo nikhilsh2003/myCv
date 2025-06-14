@@ -1,6 +1,6 @@
-\documentclass[a4paper,10pt]{article} % Compact font size
+\documentclass\[a4paper,10pt]{article} % Compact font size
 
-\usepackage[utf8]{inputenc}
+\usepackage\[utf8]{inputenc}
 \usepackage{geometry}
 \usepackage{xcolor}
 \usepackage{enumitem}
@@ -19,7 +19,7 @@
 \definecolor{darktext}{HTML}{333333}
 
 % Font style for section headers
-\titleformat{\section}{\color{headercolor}\Large\bfseries}{}{0em}{}[\titlerule]
+\titleformat{\section}{\color{headercolor}\Large\bfseries}{}{0em}{}\[\titlerule]
 
 % Adjust the space before and after section headers
 \titlespacing{\section}{0pt}{8pt}{4pt} % Reduced space before and after section headers
@@ -29,80 +29,97 @@
 
 % Header for name and contact info
 \begin{center}
-{\Huge \textbf{Nikhil Sharma}} \
+{\Huge \textbf{Nikhil Sharma}} \\
 \vspace{6pt} % Slight spacing between name and contact details
 \small
-\faEnvelope \href{mailto:nikhilsharmash65@gmail.com}{nikhilsharmash65@gmail.com} \hspace{1.5em} % Gmail Icon
+\faEnvelope \href{mailto\:nikhilsharmash65\@gmail.com}{[nikhilsharmash65@gmail.com](mailto:nikhilsharmash65@gmail.com)} \hspace{1.5em} % Gmail Icon
 \faMobile \hspace{0.3em} +91-9661052552 \hspace{1.5em} % Mobile Icon
-\faLinkedinSquare \href{https://www.linkedin.com/in/nikhilsh2003/}{linkedin.com/in/nikhilsh2003} \hspace{1.5em} % LinkedIn Icon
-\faGithub \href{https://github.com/nikhilsh2003}{github.com/nikhilsh2003} % GitHub Icon
+\faLinkedinSquare \href{[https://www.linkedin.com/in/nikhilsh2003/}{linkedin.com/in/nikhilsh2003}](https://www.linkedin.com/in/nikhilsh2003/}{linkedin.com/in/nikhilsh2003}) \hspace{1.5em} % LinkedIn Icon
+\faGithub \href{[https://github.com/nikhilsh2003}{github.com/nikhilsh2003}](https://github.com/nikhilsh2003}{github.com/nikhilsh2003}) \hspace{1.5em} % GitHub Icon
+\faCode \href{[https://leetcode.com/nikhilsh20}{leetcode.com/nikhilsh20}](https://leetcode.com/nikhilsh20}{leetcode.com/nikhilsh20}) % LeetCode Icon
 \end{center}
 
 \vspace{0.01em} % Slightly reduced vertical space after contact info
 
 % Summary Section
-\section*{Summary}
-Results-driven \underline{software developer} with strong \underline{problem-solving skills} and a passion for learning \underline{new technologies}. A collaborative \underline{team player}, unafraid to tackle \underline{challenging tasks}, and known for delivering \underline{innovative solutions}. Highly motivated, with a proven ability to \underline{adapt quickly} and excel in both individual and \underline{team-based projects}.
+\section\*{Summary}
+Software Engineer with 2 years of experience in backend development, big data processing, and system automation. Adept at building scalable backend systems using Java Spring Boot and Apache Spark. Strong competitive programming background (Global Rank 1 on GFG) and quick to learn new technologies. Skilled in Agile practices and DevOps workflows, with a track record of delivering reliable, production-grade solutions.
 
 \vspace{0.01em} % Reduced spacing after summary
 
 % Experience Section
-\section*{Experience}
-\begin{itemize}[leftmargin=0.3in, itemsep=0.7pt, topsep=2pt]
+\section\*{Experience}
+\begin{itemize}\[leftmargin=0.3in, itemsep=0.7pt, topsep=2pt]
 \item
-\textbf{Deutsche Bank} \hfill \textit{Jul 2023 – Present} \
+\textbf{Deutsche Bank} \hfill \textit{Jul 2023 -- Present} \\
 \textit{Software Developer}
-\begin{itemize}[leftmargin=*]
-\item Developed and optimized \textbf{Big Data pipelines} using \textit{Scala, Hadoop, Spark}, improving data processing efficiency by \textbf{30%}.
-\item Built and maintained \textbf{backend services} using \textit{Java, Spring Boot, JPA}, ensuring robust API performance.
-\item Managed complex \textbf{database systems} (\textit{MS SQL Server, Liquibase}), leading to \textbf{schema optimization and reduced query latency}.
-\item Automated workflows and data pipelines using \textbf{Python and Apache Airflow}, reducing manual intervention by \textbf{40%}.
-\item Led the \textbf{migration of components} from \textbf{OCP3 to OCP4}, ensuring seamless system transitions.
-\item Worked in an \textbf{Agile environment}, actively participating in \textbf{tribe-level Scrum events} (Big Room Planning, Sprint Retrospectives).
-\item \textbf{Technologies Used:} Scala, Spark, Hadoop, Java Spring Boot, Python Airflow, Liquibase, SQL, OCP4.
+\begin{itemize}\[leftmargin=\*]
+\item Developed scalable data pipelines for the "Risk in Banking Book" project using \textbf{Scala} and \textbf{Apache Spark}, improving throughput by \textbf{30%}.
+\item Built and maintained backend services using \textbf{Java, Spring Boot, JPA}, ensuring reliability and performance.
+\item Automated workflows using \textbf{Python} and \textbf{Apache Airflow}, reducing manual intervention by \textbf{40%}.
+\item Led database schema optimizations using \textbf{Liquibase} and \textbf{MS SQL Server}, improving query performance by \textbf{35%}.
+\item Migrated components from \textbf{OCP3 to OCP4}, ensuring zero downtime.
+\item Participated in Agile ceremonies including \textbf{Big Room Planning} and \textbf{Retrospectives}.
+\item \textbf{Technologies:} Scala, Spark, Java Spring Boot, Airflow, Liquibase, SQL, OCP4
 \end{itemize}
 
 \item
-\textbf{Mastercard} \hfill \textit{May 2022 – July 2022} \\
-\textit{Summer Intern}
-\begin{itemize}[leftmargin=*]
-    \item Designed a \textbf{configurable data quality validator} using \textbf{ASP.NET Core}, adopted by multiple teams.
-    \item Developed a \textbf{web interface} with \textbf{Razor Pages, JavaScript, and AJAX}, improving user input accuracy and performance.
-    \item \textbf{Technologies Used:} C++, REST APIs, SQL, ASP.NET Core, JavaScript.
+\textbf{Mastercard} \hfill \textit{May 2022 -- July 2022} \\
+\textit{Software Engineering Intern}
+\begin{itemize}\[leftmargin=\*]
+\item Built a configurable data quality validator in \textbf{ASP.NET Core}, adopted by multiple Mastercard teams.
+\item Created a web interface using \textbf{Razor Pages, JavaScript, AJAX}, reducing load times by \textbf{30%}.
+\item \textbf{Technologies:} ASP.NET Core, C++, SQL, REST APIs
 \end{itemize}
-
 \end{itemize}
 
 \vspace{0.001em}
 
 % Education Section
-\section*{Education}
-\textbf{National Institute of Technology, Warangal} \hfill \textit{2019 – 2023} \
-\textit{B.Tech in Electronics and Communication Engineering} \newline
+\section\*{Education}
+\textbf{National Institute of Technology, Warangal} \hfill \textit{2019 -- 2023} \\
+B.Tech in Electronics and Communication Engineering \\
 CGPA: 7.7/10
 
 \vspace{0.001em}
 
 % Skills Section
-\section*{Technical Skills}
+\section\*{Technical Skills}
 \begin{multicols}{2}
-\begin{itemize}[leftmargin=0.3in, itemsep=0.7pt, topsep=2pt]
-\item Programming: Scala, Java, Python, C++
-\item Big Data: Spark, Hadoop, SQL, Airflow
-\item Databases: MS SQL Server, PostgreSQL, MySQL
+\begin{itemize}\[leftmargin=0.3in, itemsep=0.7pt, topsep=2pt]
+\item Languages: Java, C++, Python, Scala
+\item Backend/Big Data: Spring Boot, Spark, Hadoop, Airflow
+\item Databases: MS SQL Server, PostgreSQL, MySQL, MongoDB Atlas
 \end{itemize}
-\begin{itemize}[leftmargin=0.3in, itemsep=0.7pt, topsep=2pt]
-\item Web Technologies: HTML, CSS, JavaScript, ASP.NET Core, Node.js
-\item DevOps & Tools: Git, Docker, Jenkins, Liquibase, OpenShift
+\begin{itemize}\[leftmargin=0.3in, itemsep=0.7pt, topsep=2pt]
+\item Web Dev: HTML, CSS, JavaScript, ASP.NET Core, Node.js
+\item Tools: Git, Docker, Jenkins, Liquibase, OpenShift
 \end{itemize}
 \end{multicols}
 
 % Projects Section
-\section*{Projects}
-\textbf{Secrets App} (Node.js, MongoDB, Google OAuth, Bcrypt) \newline
-Built a secure platform for \textbf{anonymous secrets sharing}, integrating \textbf{Google authentication and password encryption}.
+\section\*{Projects}
+\textbf{Secrets App} (Node.js, MongoDB Atlas, Google OAuth, bcrypt) \\
+Created a secure platform for anonymous secret sharing with Google authentication and bcrypt-based password hashing. \\
+\textbf{GitHub:} \href{[https://github.com/nikhilsh2003/Secrets-App}{github.com/nikhilsh2003/Secrets-App}](https://github.com/nikhilsh2003/Secrets-App}{github.com/nikhilsh2003/Secrets-App})
 
-\textbf{Blog Site} (Express.js, MongoDB Atlas, JavaScript) \newline
-Developed a \textbf{markdown-based blog platform} with unique slugs, \textbf{user-friendly navigation, and a compose feature}.
+\textbf{Blog Site} (Express.js, MongoDB Atlas, JavaScript) \\
+Built a markdown-based blog site with unique slugs, a compose feature, and clean navigation. \\
+\textbf{Live Demo:} \href{[https://blog-markdown-node.herokuapp.com/}{blog-markdown-node.herokuapp.com}](https://blog-markdown-node.herokuapp.com/}{blog-markdown-node.herokuapp.com})
+
+% Competitive Coding Section
+\section\*{Competitive Programming}
+\begin{itemize}\[leftmargin=0.3in, itemsep=0.7pt, topsep=2pt]
+\item \textbf{LeetCode:} 1904 (Knight Batch), 450+ problems solved
+\item \textbf{Codeforces:} Specialist (1418), 600+ problems solved
+\item \textbf{CodeChef:} 1808 (4-Star)
+\item \textbf{Top Rankings:}
+\begin{itemize}
+\item Global Rank \textbf{1} -- GFG Interview Series #44
+\item Global Rank \textbf{1748} -- Google KickStart 2021 Round B
+\item Global Rank \textbf{806} -- LeetCode Biweekly Contest 71
+\end{itemize}
+\item \textbf{GFG Leaderboard:} \href{[https://practice.geeksforgeeks.org/contest/interview-series-44/leaderboard}{GFG](https://practice.geeksforgeeks.org/contest/interview-series-44/leaderboard}{GFG) Interview Series #44}
+\end{itemize}
 
 \end{document}
