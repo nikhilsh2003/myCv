@@ -1,39 +1,51 @@
-name: build
-on: [workflow_dispatch]
+name: Build Resume PDF
+
+on:
+  workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
+
     env:
-      # Edit the names of your latex file and directory (can use ".")
-      DIR: .
-      FILE: cv
+      FILE: cv.tex  # Ensure your main LaTeX file is named 'cv.tex'
+
     steps:
-      - name: Set up Git repository
+      - name: Checkout Repository
         uses: actions/checkout@v4
-      - name: cv
-        uses: dante-ev/latex-action@latest
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@v2
         with:
           root_file: ${{ env.FILE }}
-          working_directory: ${{ env.DIR }}
-      - name: move
-        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
-      - name: Upload pdf as artifact
+          latexmk_shell_escape: true
+
+      - name: Move Compiled PDF to Artifacts
+        run: |
+          mkdir -p github_artifacts
+          mv cv.pdf github_artifacts/
+
+      - name: Upload PDF as Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.FILE }}.pdf
-          path: ./github_artifacts
+          name: resume-pdf
+          path: github_artifacts/cv.pdf
+
   deploy:
-    needs: [build]
+    needs: build
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: actions/download-artifact@v4
+
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
         with:
-          path: github_artifacts
-      - name: move
-        run: mkdir -p github_deploy && mv github_artifacts/*/* github_deploy
-      - name: deploy on orphan branch
+          name: resume-pdf
+          path: github_deploy
+
+      - name: Deploy to gh-pages Branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
